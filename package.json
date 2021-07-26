@@ -4,12 +4,14 @@
   "description": "Social Media Website",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Siddhant Gupta",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
     "nodemon": "^2.0.12"
   }
 }
