@@ -7,6 +7,8 @@ app.use(express.static('./assets'));
 
 app.use(expressEjsLayouts);
 
+const db= require('./config/moongoose');
+
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
 
