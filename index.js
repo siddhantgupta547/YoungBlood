@@ -2,6 +2,11 @@ const express= require('express');
 const expressEjsLayouts = require('express-ejs-layouts');
 const app= express();
 const port= 8000;
+const cookieParser= require('cookie-parser');
+
+app.use(express.urlencoded({extended: true}));
+
+app.use(cookieParser());
 
 app.use(express.static('./assets'));
 

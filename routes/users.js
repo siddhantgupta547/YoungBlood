@@ -7,6 +7,8 @@ router.get('/feed', usersController.feed);
 
 router.get('/sign-up', usersController.signup);
 
+router.post('/create', usersController.create);
+
 router.get('/sign-in', usersController.signin);
 
 
