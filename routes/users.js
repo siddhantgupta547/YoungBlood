@@ -11,5 +11,10 @@ router.post('/create', usersController.create);
 
 router.get('/sign-in', usersController.signin);
 
+router.post('/create-session', usersController.createSession);
+
+router.get('/delete-session', usersController.deleteSession);
+
+
 
 module.exports= router;

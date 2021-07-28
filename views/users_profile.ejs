@@ -1,4 +1,9 @@
 <h1>
     Users/Profile
 </h1>
-    
+<p>
+    Hi! <%= user.name %>
+</p>
+<div id="signout-container">
+    <button type="submit" onclick="window.location.replace('/users/delete-session');">Sign Out</button>
+</div>
