@@ -9,11 +9,21 @@ module.exports.feed= function(req, res){
 }
 
 module.exports.signup= function(req,res){
-    return res.render('users_sign_up');
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
+    else{
+        return res.render('users_sign_up');
+    }
 }
 
 module.exports.signin= function(req,res){
-    res.render('users_sign_in');
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
+    else{
+        return res.render('users_sign_in');
+    }
 }
 
 module.exports.create= function(req, res){
@@ -42,6 +52,6 @@ module.exports.create= function(req, res){
     }));
 }
 
-// module.exports.createSession= function(req, res){
-
-// }
+module.exports.createSession= function(req, res){
+    return res.redirect('/');
+}
